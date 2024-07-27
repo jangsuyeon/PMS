@@ -1,0 +1,22 @@
+:root {
+    /* font color */
+    --font-primary : #333;
+    --footer-font: #c6c6c6;
+
+    /* main color */
+    --primary : #83735c;
+    --secondary : #f6f0e8;
+    --third : #e4ca9c;
+    --color-fill : #d48943;
+    --color-btn-tour: #243042;
+    --color-gnb-1 : #eef2f6;
+
+    /* basic color */
+    --white : #fff;
+    --black : #000;
+    --color7 : #777;
+    --color5: #555;
+    --color4 : #444;
+    --colorD : #ddd;
+
+}

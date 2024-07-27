@@ -1,0 +1,64 @@
+@charset "utf-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    color: var(--font-primary);
+    background-color: var(--secondary);
+}
+
+a {
+    color: var(--font-primary);
+}
+
+ul li {
+    list-style: none;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+/* scollbar css start */
+body::-webkit-scrollbar {
+    width: 10px;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: var(--primary);
+    border-radius: 15px;
+}
+
+body::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+/* scollbar css end */
+
+
+/* li marker custom  */ 
+.li-marker li {
+  position: relative;
+  margin-left: 20px;
+  padding-left: 20px;
+}
+.li-marker li::before {
+  content: "";
+  width: 10px;
+  height: 2px;
+  display: block;
+  position: absolute;
+  top: 10px;
+  left: 0;
+  transform: translate(-50%, -50%);
+  background-color: var(--font-primary);
+}
+.li-marker li.marker-none::before {
+  display: none;
+}
+.li-marker li.marker-none {
+  padding-left: 0;
+  margin-left: 0;
+}
