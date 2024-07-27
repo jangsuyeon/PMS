@@ -5,6 +5,8 @@
 
     /* main color */
     --primary : #83735c;
+    --primary-shadow : 0 0 0 0.25rem rgba(131, 115, 92, 0.25);
+    --primary-calendar-cell-range-bg: rgba(131, 115, 92, 0.125);
     --secondary : #f6f0e8;
     --third : #e4ca9c;
     --color-fill : #d48943;

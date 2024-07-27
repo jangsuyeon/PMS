@@ -55,6 +55,112 @@
 	}
 }
 
+.nav-link {
+	color: var(--font-primary);
+}
+
+.date-picker.show .date-picker-input-group {
+    background-color: var(--cui-date-picker-focus-bg);
+    border-color: var(--primary);
+    outline: 0;
+    box-shadow: var(--primary-shadow);
+}
+
+.calendar-cell.selected:not(th,.next,.previous) .calendar-cell-inner, .calendar-row.selected:not(th,.next,.previous) .calendar-cell-inner {
+	background-color: var(--primary);
+}
+
+.calendar-cell.range .calendar-cell-inner::after, .calendar-row.range .calendar-cell-inner::after {
+	background: var(--primary-calendar-cell-range-bg);
+}
+
+.nav-tabs {
+    --cui-nav-tabs-border-width: none;
+}
+.nav-tabs .nav-link {
+    border: none;
+    border-top-left-radius: 0.25rem;
+    border-top-right-radius: 0.25rem;
+}
+.nav-tabs .nav-link:hover, .nav-tabs .nav-link:focus {
+    border-color: transparent;
+}
+.nav-link:focus, .nav-link:hover {
+    color: var(--primary);
+}
+
+/* 
+.calendar-row,
+.calendar-cell .range-hover .calendar-cell-inner::before {
+    border-top: 1px dashed var(--primary);
+    border-bottom: 1px dashed var(--primary);
+}
+
+.calendar-cell .range-hover:first-of-type,
+.calendar-cell:not(.range-hover)+&.range-hover .calendar-cell-inner::before  {
+    border-left: 1px dashed var(--primary);
+    
+}
+
+.calendar-cell .range-hover:not(:has(~ .range-hover)) .calendar-cell-inner::before {
+    border-right: 1px dashed var(--primary);
+}
+.calendar-row .range-hover .calendar-cell:first-of-type .calendar-cell-inner::before {
+    border-left: 1px dashed var(--primary);
+}
+
+.calendar-row .range-hover .calendar-cell:last-of-type .calendar-cell-inner::before {
+    border-right: 1px dashed var(--primary);
+} */
+
+.res-flex {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.res-room-btn {
+	display: inline-block;
+    width: 100%;
+    background-color: var(--primary);
+    padding: 30px 0px;
+    color: var(--white);
+    font-size: 1.3rem;
+    text-align: center;
+}
+.date-picker .date-picker-input-group {
+	height: 90px;
+}
+
+.date-picker-input {
+	font-size: 1.5rem;
+}
+.room-select {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	margin-top: 30px;
+}
+.room-select .room-grid {
+	padding: 10px 40px;
+	background-color: #fafafa;
+}
+.room-select p {
+	margin-bottom: 0;
+}
+.room-image {
+	margin-bottom: 10px;
+}
+.room-title {
+	font-size: 1.3rem;
+}
+.room-des {
+	color: var(--color7);
+}
+.room-select .room-price {
+	text-align: right;
+	font-size: 1.5rem;
+}
+
 
 
 footer {

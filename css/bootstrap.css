@@ -51,7 +51,7 @@ h1, h2, h3, h4, h5, h6 {
 
 p {
   margin-top: 0;
-  margin-bottom: 1rem;
+  /* margin-bottom: 1rem; */
 }
 
 abbr[title],
@@ -4054,16 +4054,16 @@ input[type="button"].btn-block {
   margin-bottom: -1px;
 }
 
-.nav-tabs .nav-link {
+/* .nav-tabs .nav-link {
   border: 1px solid transparent;
   border-top-left-radius: 0.25rem;
   border-top-right-radius: 0.25rem;
-}
+} */
 
-.nav-tabs .nav-link:hover, .nav-tabs .nav-link:focus {
+/* .nav-tabs .nav-link:hover, .nav-tabs .nav-link:focus {
   border-color: var(--primary);
   color: var(--primary);
-}
+} */
 
 .nav-tabs .nav-link.disabled {
   color: #6c757d;
