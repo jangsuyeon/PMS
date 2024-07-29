@@ -113,6 +113,12 @@
     border-right: 1px dashed var(--primary);
 } */
 
+.page-title {
+	margin-bottom: 2rem;
+    font-size: 2rem;
+    letter-spacing: -.5px;
+}
+
 .res-flex {
 	display: flex;
 	justify-content: space-between;
@@ -147,7 +153,7 @@
 .room-select p {
 	margin-bottom: 0;
 }
-.room-image {
+.res-room-image {
 	margin-bottom: 10px;
 }
 .room-title {
@@ -161,16 +167,143 @@
 	font-size: 1.5rem;
 }
 
+.res-user {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-bottom: 10px;
+}
+.res-user span {
+	width: 10%;
+}
+
+.res-user input {
+	border: 1px solid var(--input-border);
+	padding: 5px 10px;
+	border-radius: 5px;
+}
+#hotel-intro,
+#room {
+	margin: 8rem 0;
+}
+
+.prolog-intro {
+	display: flex;
+}
+.prolog-intro .intro {
+	width: 50%;
+}
+.prolog-image {
+	margin-left: 20px;
+}
+.prolog-intro .prolog-image img {
+	width: 100%;
+}
+
+.room-intro {
+	display: flex;
+	border: 1px solid var(--primary-15);
+	margin: 20px 0;
+}
+
+.room-intro .room-image {
+	width: 85%;
+}
+
+.room-intro .room-image img {
+	width: 100%;
+}
+
+.room-intro .room-description {
+	padding: 40px 75px;
+}
+
+.room-description p {
+	margin-bottom: 10px;
+}
+
+.room-description .room-des-title {
+	font-size: 1.8rem;
+}
+
+.room-in {
+	border-top: 1px solid var(--color7-15);
+	margin-top: 20px;
+    padding-top: 20px;
+}
+
+.room-description .room-des-des {
+	font-size: 0.8rem;
+}
+
+.room-more {
+	display: inline-block;
+	border: 1px solid var(--primary);
+	color: var(--primary);
+	padding: 10px 35px;
+	margin-top: 10px;
+}
+
+.room-more:hover {
+	background-color: var(--primary);
+	color: var(--white);
+}
 
 
 footer {
     background-color: var(--primary);
     font-weight: 300;
-    color: var(--footer-font)
+    color: var(--footer-font);
+	margin-top: 8rem;
+	padding: 5rem 0;
+}
+footer p {
+	margin-bottom: 0;
+}
+.line-before {
+	display: inline-block;
+	margin: 0 10px;
+	position: relative;
+}
+.line-before::before {
+	content: "";
+	width: 0.5px;
+	height: 15px;
+	background-color: var(--footer-font);
+	position: absolute;
+	top: 50%;
+	left: 56%;
+	transform: translate(-50%, -50%);
+	display: block;
+}
+
+.footer-logo {
+	border-bottom: 1px solid var(--secondary-15);
+	margin-bottom: 20px;
+	padding-bottom: 20px;
 }
 .company {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+}
+.footer-title {
+	margin-bottom: 10px;
+}
+.footer-content {
+	line-height: 22px;
+}
+.footer-content>div {
+	display: flex;
+}
 
+.footer-res {
+	display: inline-block;
+	border: 1px solid var(--footer-font);
+	color: var(--footer-font);
+	padding: 10px 15px;
+}
+
+.copyright {
+	margin-top: 20px;
+	font-size: .8rem;
 }

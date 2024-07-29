@@ -45,6 +45,12 @@
     line-height: 45px
 }
 
+#btn_resv:hover {
+    border: 1px solid var(--primary);
+    background-color: var(--white);
+    color: var(--primary);
+}
+
 @media screen and (min-width: 1351px) {
     #hd {
         transition:background 0.3s ease-out,height 0.3s ease-out
@@ -618,7 +624,11 @@ a.gnb_2da:hover {
 #mtourNS .mtitem li:hover:before{opacity: 0.4}
 /*#mtourNS .mtitem li:last-child{ margin-right: 0;}*/
 #mtourNS .mtitem li img{ width: 100%; height: auto;}
-#mtourNS > a{ display: block; width: 90%; margin: 5% auto 0; background-color: var(--color-btn-tour); line-height: 65px; color: var(--white); font-size: 18px;}
+#mtourNS > a{ display: block; width: 90%; margin: 5% auto 0; background-color: var(--color-btn-tour); line-height: 65px; color: var(--white); font-size: 18px;border: 1px solid var(--color-btn-tour);}
+#mtourNS > a:hover {
+    background-color: var(--white);
+    color: var(--color-btn-tour);
+}
 @media screen and (max-width: 991px){
   #mtourNS .mttit div{ font-size: 30px;}
   #mtourNS .mttit ul li{ font-size: 12px;}
@@ -651,6 +661,8 @@ a.gnb_2da:hover {
 .reser{background: url("http://nstayimg7.speedgabia.com/lunarhill2/timg_reser.jpg") top center no-repeat; background-size: cover; }
 .position{background: url("http://nstayimg7.speedgabia.com/lunarhill2/timg_rp.jpg") top center no-repeat; background-size: cover; }
 .res {background: url("../image/aa.jpg") center no-repeat; background-size: cover;}
+.prolog {background: url("../image/ex_img1.jpg") center no-repeat; background-size: cover;}
+.room {background: url("../image/ex_img1.jpg") center no-repeat; background-size: cover;}
 
 
 /* tour */
