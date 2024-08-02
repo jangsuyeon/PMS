@@ -74,7 +74,7 @@
 	background: var(--primary-calendar-cell-range-bg);
 }
 
-.nav-tabs {
+/* .nav-tabs {
     --cui-nav-tabs-border-width: none;
 }
 .nav-tabs .nav-link {
@@ -87,6 +87,26 @@
 }
 .nav-link:focus, .nav-link:hover {
     color: var(--primary);
+} */
+
+.nav-tabs {
+	border: none;
+	justify-content: center;
+}
+.nav-tabs .nav-link {
+	border: none;
+	font-size: 1.3rem;
+}
+.nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
+	border: none;
+	border-bottom: 2px solid var(--primary);
+}
+.nav-tabs .nav-link:focus, .nav-tabs .nav-link:hover {
+	color: var(--primary);
+	font-size: 1.3rem;
+}
+.navbar-brand {
+	font-size: 1.3rem;
 }
 
 /* 
