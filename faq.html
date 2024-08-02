@@ -5,6 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <!-- <link href="css/bootstrap.css" rel="stylesheet" /> -->
+     <link href="test/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/swiper.css" rel="stylesheet" />
     <link href="css/font.css" rel="stylesheet" />
     <link href="css/commmon.css" rel="stylesheet" />
     <link href="css/stay.css" rel="stylesheet" />
@@ -14,13 +17,8 @@
     <link href="css/custom.css" rel="stylesheet" />
     <link href="css/stayani.css" rel="stylesheet" />
     <link href="css/play.css" rel="stylesheet" />
-    <link href="css/bootstrap.css" rel="stylesheet" />
-    <link href="css/swiper.css" rel="stylesheet" />
 
     <script src="js/scroll.js"></script>
-
-    <!-- fontawesom cdn -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
      
     <!-- google icon -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Sharp|Material+Icons+Two+Tone|Material+Icons+Outlined|Material+Icons+Round" rel="stylesheet">
@@ -241,72 +239,61 @@
         </script>
     </header>
 
-    <section id="index">
-
-        <div class="section video" style="height: 945px;">
-            <div class="MyFrame">
-                <video id="MyVideo" autoplay="" loop="" playsinline="" muted="" width="100%" height="auto">
-                    <source src="http://gonylabvid02.speedgabia.com/therivers/main.mp4" type="video/mp4" />
-                </video>
-            </div>
-
-            <!--<h2><img src="images/idx_ttl.png" alt="" width="650" height="350" /></h2>-->
-
-            <div class="btns">
-                <div class="b01">
-                    <a href="rooms.html?num=01"><span>View Our Rooms</span></a>
-                </div>
-                <div class="b02">
-                    <a href="video.html"><span>Watch Full Video</span></a>
-                </div>
-            </div>
-
-            <!-- <div class="scroll">
-                <a href="#"><img src="images/scroll.png" alt="" width="40" height="52" /></a>
-            </div> -->
+    <section id="tour">
+       
+        <div class="svisual joy">
+            FAQ<br>
+            <b>자주물어보는 질문</b>
         </div>
-
-        <div class="section special">
-            <div class="wow slideUp">
-                <div class="wow slideDown">
-                    <div class="main_txt">THE RIVER.S</div>
-                    
-                    <h3>이국적인 럭셔리 기준의 재정의</h3>
-                    
-                    <h4>
-                        지중해풍 아치가 펼쳐지는 이국적인 미온수 수영장과<br>
-                        그 주변을 감싸듯이 위치하고 있는 2가지 타입, 총 10개의 객실로 구성되어 있습니다.<br>
-                        리버뷰 가든과 어울어지는 더리버S풀빌라는 여러분의 럭셔리의 기준을 재정의합니다. 
-                    </h4>
+        <div id="faq">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h3 class="page-title">FAQ</h3>
+                        <div class="accordion custom-acc" id="accordionExample">
+                            <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                Accordion Item #1
+                                </button>
+                            </h2>
+                            <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                                </div>
+                            </div>
+                            </div>
+                            <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                Accordion Item #2
+                                </button>
+                            </h2>
+                            <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                                </div>
+                            </div>
+                            </div>
+                            <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                Accordion Item #3
+                                </button>
+                            </h2>
+                            <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                                </div>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-
-        <div id="mtourNS">
-            <div class="mttit">
-                <div class="wow slideUp">루나힐풀빌라가 <b>추천하는</b> 여행지</div>
-                <ul class="wow slideDown">
-                    <li>#대릉원</li>
-                    <li>#첨성대</li>
-                    <li>#문무대왕릉</li>
-                    <li>#옥산서원</li>
-                    <li>#보문관광단지</li>
-                    <li>#황성공원</li>
-                </ul>
-            </div>
-            <div class="mtitem wow slideUp">
-                <ul>
-                    <li data-tour="대릉원"><img src="http://nstayimg7.speedgabia.com/lunarhill2/main/mto_01.png" alt=""></li>
-                    <li data-tour="첨성대"><img src="http://nstayimg7.speedgabia.com/lunarhill2/main/mto_02.png" alt=""></li>
-                    <li data-tour="문무대왕릉"><img src="http://nstayimg7.speedgabia.com/lunarhill2/main/mto_03.png" alt=""></li>
-                    <li data-tour="옥산서원"><img src="http://nstayimg7.speedgabia.com/lunarhill2/main/mto_04.png" alt=""></li>
-                    <li data-tour="보문관광단지"><img src="http://nstayimg7.speedgabia.com/lunarhill2/main/mto_05.png" alt=""></li>
-                    <li data-tour="황성공원"><img src="http://nstayimg7.speedgabia.com/lunarhill2/main/mto_06.png" alt=""></li>
-                </ul>
-            </div>
-            <a href="tour.html" class="wow slideUp">여행지 자세히 보기</a>
-        </div>
-
+       
+        
         <script>
             new WOW().init();
         </script>
@@ -373,12 +360,14 @@
 
     <script src="js/jquery.min.js"></script>
     <script src="js/popper.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
+    <!-- <script src="js/bootstrap.min.js"></script> -->
+     <script src="test/bootstrap.min.js"></script>
     <script src="js/jquery.easing.min.js"></script>
     <script src="js/swiper.min.js"></script>
     <script src="js/jquery.magnific-popup.js"></script>
     <script src="js/validator.min.js"></script>
     <script src="js/scripts.js"></script>
+
 </body>
 
 </html>

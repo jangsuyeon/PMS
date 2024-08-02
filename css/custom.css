@@ -183,7 +183,8 @@
 	border-radius: 5px;
 }
 #hotel-intro,
-#room {
+#room,
+#faq {
 	margin: 8rem 0;
 }
 
@@ -306,4 +307,79 @@ footer p {
 .copyright {
 	margin-top: 20px;
 	font-size: .8rem;
+}
+
+#login {
+	min-height: 70vh;
+}
+#login .dummy {
+	height: 10rem;
+}
+#login .page-title {
+	text-align: center;
+}
+
+.login-tab-content {
+	display: flex;
+	justify-content: center;
+	background-color: var(--login-background);
+	padding: 5rem 0;
+}
+.login-box {
+	text-align: center;
+}
+
+.login-div {
+	margin-bottom: 1rem;
+}
+
+.login-remember {
+	text-align: left;
+}
+
+.login-input input {
+	width: 100%;
+	border: 1px solid var(--input-border);
+	border-radius: 5px;
+	padding: 10px 15px;
+}
+
+.double-chk-btn {
+	background-color: var(--primary);
+	color: var(--white);
+	border: 1px solid var(--primary);
+	border-radius: 5px;
+	padding: 9px 22px;
+}
+
+.login-btn {
+	width: 100%;
+	background-color: var(--primary);
+	color: var(--white);
+	padding: 15px 0;
+	border: 1px solid var(--primary);
+	border-radius: 5px;
+	margin-top: 10px;
+}
+.double-chk-btn:hover,
+.login-btn:hover {
+	background-color: var(--white);
+	color: var(--primary);
+}
+.double-chk-btn:active,
+.login-btn:active {
+	background-color: var(--primary);
+	color: var(--white);
+}
+
+.other-login a {
+	margin-right: 10px;
+}
+.other-login a:hover {
+	color: var(--primary);
+	text-decoration: underline !important;
+}
+
+.custom-acc {
+	margin-top: 2rem;
 }

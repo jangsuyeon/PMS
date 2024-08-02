@@ -23,7 +23,12 @@
     --color5: #555;
     --color4 : #444;
     --colorD : #ddd;
+    --colorC : #ccc;
+    --colorE : #eee;
 
     --input-border: #dbdfe6;
+    --input-check-border: #bdb2b2;
+
+    --login-background : #f9f9f9;
 
 }
