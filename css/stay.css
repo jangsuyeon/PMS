@@ -665,6 +665,10 @@ a.gnb_2da:hover {
 .prolog {background: url("../image/ex_img1.jpg") center no-repeat; background-size: cover;}
 .room {background: url("../image/ex_img1.jpg") center no-repeat; background-size: cover;}
 .joy {background: url("../image/ex_img1.jpg") center no-repeat; background-size: cover;}
+.payment {
+    background-color: var(--primary);
+    padding: 200px 0;
+}
 
 
 /* tour */
