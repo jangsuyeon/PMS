@@ -558,3 +558,120 @@ footer p {
 .custom-acc {
 	margin-top: 2rem;
 }
+
+.page-progress {
+	display: flex;
+	justify-content: center;
+	align-items: baseline;
+	margin: 3rem 0 5rem;
+	text-align: center;
+}
+
+.progress-circle {
+	width: 80px;
+	height: 80px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 50%;
+	background-color: var(--primary-15);
+	margin-bottom: 1rem;
+}
+
+.progress-circle i {
+	font-size: 2rem;
+}
+
+.progress-circle.active {
+	background-color: var(--primary);
+}
+
+.progress-circle.active i {
+	color: var(--white);
+}
+
+.progress-next {
+	display: flex;
+	align-items: center;
+	margin: 0 3rem;
+}
+
+.progress-next .circle {
+	width: 5px;
+	height: 5px;
+	border-radius: 50%;
+	background-color: var(--primary);
+	margin: 0 5px;
+}
+
+.pay-com-title {
+	text-align: center;
+	font-size: 2rem;
+}
+
+.pay-com-content {
+	margin: 5rem 0;
+}
+
+.payc-com-info {
+	display: flex;
+}
+
+.payc-room-img {
+	margin-right: 2rem;
+}
+
+.payc-res-info {
+	margin: 3rem 0
+}
+
+.payc-res-info .payc-res-info-title {
+	display: inline-block;
+    font-size: 1.5rem;
+    border-bottom: 3px solid;
+    margin-bottom: 2rem;
+    padding: 0 10px;
+}
+
+.payc-res-info dl {
+	display: flex;
+	border-bottom: 1px solid var(--input-border);
+	margin-bottom: 0;
+}
+
+.payc-res-info dl dt,
+.payc-res-info dl dd {
+	padding: 10px;
+	margin-bottom: 0;
+}
+.payc-res-info dl dt {
+	width: 20%;
+    text-align: center;
+	
+}
+.payc-res-info dl dd {}
+
+
+
+.payc-link-box {
+	text-align: center;
+}
+
+.payc-link-box a {
+	display: inline-block;
+	border: 1px solid var(--primary);
+	padding: 10px 16px;
+	margin-right: 5px;
+	border-radius: 5px;
+	background-color: var(--primary);
+	color: var(--white);
+}
+
+.payc-link-box a:hover {
+	color: var(--primary);
+	background-color: var(--white);
+}
+
+.payc-link-box a:last-of-type {
+	margin-right: 0;
+}
