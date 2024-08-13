@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="date" id="her" />
+    <input type="text" id="posi" />
+    <button type="button">버튼</button>
+    <input type="text" id="result" />
+
+
+
+    <script>
+        // document.addEventListener("DOMContentLoaded", ()=>{
+        //     const dateInput = document.getElementById('her');
+        //     const btn1 = document.querySelector('button');
+        //     const selectedDate = dateInput.value; 
+            
+        //     btn1.addEventListener("click", (e)=>{
+        //         e.preventDefault();
+        //         console.log(selectedDate);
+        //         const year = selectedDate.substring(0, 4);
+        //         console.log(year);
+        //     });
+
+            
+        // });
+
+        document.addEventListener("DOMContentLoaded", () => {
+            const dateInput = document.getElementById('her');
+            const textInput = document.getElementById('posi');
+            const result = document.getElementById('result');
+            const btn1 = document.querySelector('button');
+
+            btn1.addEventListener("click", (e) => {
+                e.preventDefault();
+                if(!dateInput.value || !textInput.value) {
+                    alert("abc값을 입력해주세요");
+                }
+                const selectedDate = dateInput.value; // 버튼 클릭 시마다 값을 가져옴
+                const selectedText = textInput.value;
+                const year = selectedDate.substring(2, 4);
+                // console.log(year);
+                // console.log(selectedText);
+                console.log(year + selectedText);
+                result.value = year + selectedText;
+
+            });
+        });
+
+    </script>
+
+</body>
+
+</html>

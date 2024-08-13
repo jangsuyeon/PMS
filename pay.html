@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <span>기본급</span>
+        <input type="number" id="basic" />
+    </div>
+    <div>
+        <span>야근수당</span>
+        <input type="number" id="overTime" />
+    </div>
+    <div>
+        <span>상여금</span>
+        <input type="number" id="bonus" />
+    </div>
+    
+    
+    <div>
+        <span>국민연금</span>
+        <input type="number" id="naPen" />
+    </div>
+    <div>
+        <span>건강보험</span>
+        <input type="number" id="heIns" />
+    </div>
+    <div>
+        <span>고용보험</span>
+        <input type="number" id="empIns" />
+    </div>
+    <div>
+        <span>장기요양보험료</span>
+        <input type="number" id="longIns" />
+    </div>
+    <div>
+        <span>소득세</span>
+        <input type="number" id="Tax" />
+    </div>
+    <div>
+        <span>지방소득세</span>
+        <input type="number" id="localTax" />
+    </div>
+
+    <div>
+        <span>지급액</span>
+        <input type="number" id="total" />
+    </div>
+
+    <div>
+        <span>공제 총금액</span>
+        <input type="number" id="dedu" />
+    </div>
+
+    <div>
+        <span>실수령 금액</span>
+        <input type="number" id="totaltotal" />
+    </div>
+
+    <button class="btn">자동 입력</button>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            let basic = document.getElementById("basic");
+            let overTime = document.getElementById("overTime");
+            let bonus = document.getElementById("bonus");
+            let total = document.getElementById("total");
+            let dedu = document.getElementById("dedu");
+            let naPen = document.getElementById("naPen");
+            let heIns = document.getElementById("heIns");
+            let empIns = document.getElementById("empIns");
+            let longIns = document.getElementById("longIns");
+            let Tax = document.getElementById("Tax");
+            let localTax = document.getElementById("localTax");
+            let totaltotal = document.getElementById("totaltotal");
+
+            const btn1 = document.querySelector('button');
+
+            btn1.addEventListener("click", () => {
+                // 기본급 5000000 일때
+
+                // 국민연금(naPen) 4.5% => 225,000
+                // 건강보험(heIns) 3.5% => 175,000
+                // 고용보험(empIns) 0.9% => 45,000
+                // 장기요양보험료(longIns) 0.4% => 20,000
+                // 소득세(tax) 3% => 150,000
+                // 지방소득세(localTax) 소득세의 10% => 15,000
+
+                // 지급액(total) = 기본급(basic) + 야근수당(overTime) + 상여금(bonus)
+                // 공제금액(dedu) = 국민연금(naPen) + 건강보험(heIns) + 고용보험(empIns) + 장기요양보험료(longIns) + 소득세(tax) + 지방소득세(localTax) = 630,000
+                // 실수령 금액(totaltotal) = 지급액(total) - 공제금액(dedu)
+
+                naPen = basic * (4.5 / 100);
+                heIns = basic * (3.5 / 100);
+                empIns = basic * (0.9 / 100);
+                longIns = basic * (0.4 / 100);
+                tax = basic * (10 / 100);
+                localTax = tax * (3.5 / 100);
+
+                total = basic + overTime + bonus;
+
+                dedu = naPen + heIns + empIns + longIns + tax + localTax;
+
+                totaltotal = total - dedu;
+
+                naPen.value = naPen;
+                heIns.value = heIns;
+                empIns.value = empIns;
+                longIns.value = longIns;
+                tax.value = tax;
+                localTax.value = localTax;
+                total.value = total;
+                dedu.value = dedu;
+                totaltotal.value = totaltotal;
+
+            });
+        });
+
+    </script>
+</body>
+</html>
