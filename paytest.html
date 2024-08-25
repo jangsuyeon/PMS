@@ -1,0 +1,127 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <span>기본급</span>
+        <input type="text" id="basic" />
+    </div>
+    <div>
+        <span>야근수당</span>
+        <input type="text" id="overTime" />
+    </div>
+    <div>
+        <span>상여금</span>
+        <input type="text" id="bonus" />
+    </div>
+    
+    
+    <div>
+        <span>국민연금</span>
+        <input type="text" id="naPen" readonly />
+    </div>
+    <div>
+        <span>건강보험</span>
+        <input type="text" id="heIns" readonly />
+    </div>
+    <div>
+        <span>고용보험</span>
+        <input type="text" id="empIns" readonly />
+    </div>
+    <div>
+        <span>장기요양보험료</span>
+        <input type="text" id="longIns" readonly />
+    </div>
+    <div>
+        <span>소득세</span>
+        <input type="text" id="Tax" readonly />
+    </div>
+    <div>
+        <span>지방소득세</span>
+        <input type="text" id="localTax" readonly />
+    </div>
+
+    <div>
+        <span>지급액</span>
+        <input type="text" id="total" readonly />
+    </div>
+
+    <div>
+        <span>공제 총금액</span>
+        <input type="text" id="dedu" readonly />
+    </div>
+
+    <div>
+        <span>실수령 금액</span>
+        <input type="text" id="totaltotal" readonly />
+    </div>
+
+    <button class="btn">자동 입력</button>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            let basic = document.getElementById("basic");
+            let overTime = document.getElementById("overTime");
+            let bonus = document.getElementById("bonus");
+            let total = document.getElementById("total");
+            let dedu = document.getElementById("dedu");
+            let naPen = document.getElementById("naPen");
+            let heIns = document.getElementById("heIns");
+            let empIns = document.getElementById("empIns");
+            let longIns = document.getElementById("longIns");
+            let tax = document.getElementById("Tax");
+            let localTax = document.getElementById("localTax");
+            let totaltotal = document.getElementById("totaltotal");
+
+            const btn1 = document.querySelector('.btn');
+
+            // let inputText = document.querySelectorAll("input[type='text']");
+            // let inputLength = inputText.length;
+
+            // for(let i = 0; i < inputLength; i++){
+            //     inputText[i].addEventListener('keyup', function (e) {
+            //         let value = e.target.value;
+            //         value = Number(value.replaceAll(',', ''));
+            //         const formatValue = value.toLocaleString('ko-KR');
+            //         inputText.value = formatValue;
+            //     });
+            // }
+            btn1.addEventListener("click", () => {
+                let basicValue = Number(basic.value);
+                let overTimeValue = Number(overTime.value);
+                let bonusValue = Number(bonus.value);
+
+                // 소수점 없애기
+                naPen.value = Math.round(basicValue * (4.5 / 100));
+                heIns.value = Math.round(basicValue * (3.5 / 100));
+                empIns.value = Math.round(basicValue * (0.9 / 100));
+                longIns.value = Math.round(basicValue * (0.4 / 100));
+                tax.value = Math.round(basicValue * (3 / 100));
+                localTax.value = Math.round(Number(tax.value) * (10 / 100));
+
+                total.value = Math.round(basicValue + overTimeValue + bonusValue);
+                dedu.value = Math.round(Number(naPen.value) + Number(heIns.value) + Number(empIns.value) + Number(longIns.value) + Number(tax.value) + Number(localTax.value));
+                totaltotal.value = Math.round(Number(total.value) - Number(dedu.value));
+            });
+        });
+
+        let inputText = document.querySelectorAll("input[type='text']");
+        let inputLength = inputText.length;
+        for(let i = 0; i < inputLength; i++){
+            inputText[i].addEventListener("keyup", (e)=>{
+                let value = e.target.value;
+                    value = Number(value.replaceAll(',', ''));
+                    const formatValue = value.toLocaleString('ko-KR');
+                    inputText.value = formatValue;
+            });
+        }
+
+
+    </script>
+</body>
+</html>

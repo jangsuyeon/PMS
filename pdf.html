@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/pdf/html2canvas.js"></script>
+    <script src="js/pdf/jspdf.min.js"></script>
+    <style>
+        .hide {
+            display: none;
+        }
+       
+
+    </style>
+</head>
+
+<body>
+    <button id="print-button">pdf button</button>
+    <div id="hidden">
+    <div id="print-content">
+        <h1 style="color: red;">안녕하세요</h1>
+        <p>PDF 문서의 내용입니다</p>
+        <p class="hide">숨겨진 내용</p>
+        <table>
+            <colgroup>
+                <col width="20%">
+                <col width="">
+                <col width="20%">
+                <col width="">
+            </colgroup>
+            <tbody><tr>
+                <th>지급액</th>
+                <th>금액(원)</th>
+                <th>공제금액</th>
+                <th>금액(원)</th>
+            </tr>
+
+            <tr>
+                <th>기본금</th>
+                <td>1000000원</td>
+                <th>국민연금</th>
+                <td>45000원</td>
+            </tr>
+            <tr>
+                <th>상여금</th>
+                <td>0원</td>
+                <th>건강보험</th>
+                <td>35000원</td>
+            </tr>
+            <tr>
+                <th>기본금</th>
+                <td>1000000원</td>
+                <th>국민연금</th>
+                <td>45000원</td>
+            </tr>
+            <tr>
+                <th>상여금</th>
+                <td>0원</td>
+                <th>건강보험</th>
+                <td>35000원</td>
+            </tr>
+            <tr>
+                <th>기본금</th>
+                <td>1000000원</td>
+                <th>국민연금</th>
+                <td>45000원</td>
+            </tr>
+            <tr>
+                <th>상여금</th>
+                <td>0원</td>
+                <th>건강보험</th>
+                <td>35000원</td>
+            </tr>
+            <tr>
+                <th>기본금</th>
+                <td>1000000원</td>
+                <th>국민연금</th>
+                <td>45000원</td>
+            </tr>
+            <tr>
+                <th>상여금</th>
+                <td>0원</td>
+                <th>건강보험</th>
+                <td>35000원</td>
+            </tr>
+            <tr>
+                <th>기본금</th>
+                <td>1000000원</td>
+                <th>국민연금</th>
+                <td>45000원</td>
+            </tr>
+            <tr>
+                <th>상여금</th>
+                <td>0원</td>
+                <th>건강보험</th>
+                <td>35000원</td>
+            </tr>
+            <tr>
+                <th>기본금</th>
+                <td>1000000원</td>
+                <th>국민연금</th>
+                <td>45000원</td>
+            </tr>
+            <tr>
+                <th>상여금</th>
+                <td>0원</td>
+                <th>건강보험</th>
+                <td>35000원</td>
+            </tr>
+            <tr>
+                <th>기본금</th>
+                <td>1000000원</td>
+                <th>국민연금</th>
+                <td>45000원</td>
+            </tr>
+            <tr>
+                <th>상여금</th>
+                <td>0원</td>
+                <th>건강보험</th>
+                <td>35000원</td>
+            </tr>
+            <tr>
+                <th>야근수당</th>
+                <td>0원</td>
+                <th>고용보험</th>
+                <td>9000원</td>
+
+            </tr>
+            <tr>
+                <th></th>
+                <td></td>
+                <th>장기요양보험료</th>
+                <td>4000원</td>
+            </tr>
+            <tr>
+                <th></th>
+                <td></td>
+                <th>소득세</th>
+                <td>30000원</td>
+            </tr>
+            <tr>
+                <th></th>
+                <td></td>
+                <th>지방소득세</th>
+                <td>3000원</td>
+            </tr>
+            <tr>
+                <th>지급액</th>
+                <td>1000000원</td>
+                <th>공제금액</th>
+                <td>126000원</td>
+            </tr>
+            <tr>
+                <th></th>
+                <td></td>
+                <th>실 수령액</th>
+                <td>874000원</td>
+            </tr>
+        </tbody></table>
+
+        <p>dfds</p>
+        <p>dfds</p>
+        <p>dfds</p>
+        <p>dfds</p>
+        <p>dfds</p>
+    </div></div>
+    <p>dfds</p>
+    
+
+
+    <script>
+        // 특정 요소를 선택하여 출력할 내용을 가진 변수
+        const printContent = document.querySelector('#print-content');
+        const hide = document.querySelector(".hide");
+        // hide.style.display = "block";
+
+        // 출력 버튼 클릭 시 실행되는 함수
+        function showPrint() {
+            html2canvas(printContent, {
+                // 이미지 품질 및 크기 조절 등 옵션 설정
+                scale: 1,
+            }).then(canvas => {
+                const imgData = canvas.toDataURL('image/png');
+                const imgWidth = 120; // 이미지 가로 길이 (mm)
+                const pageHeight = imgWidth * 1.414; // 출력 페이지 세로 길이
+                const imgHeight = canvas.height * imgWidth / canvas.width;
+                let heightLeft = imgHeight;
+                const margin = 45; // 출력 페이지 여백 설정
+                const doc = new jsPDF('p', 'mm');
+                let position = 10;
+
+                window.scrollTo(0, 0);
+
+                // 첫 페이지 출력
+                doc.addImage(imgData, 'PNG', margin, position, imgWidth, imgHeight);
+                heightLeft -= pageHeight;
+
+                // 여러 페이지 출력
+                while (heightLeft >= 20) {
+                    position = heightLeft - imgHeight - 20;
+                    doc.addPage();
+                    doc.addImage(imgData, 'PNG', margin, position, imgWidth, imgHeight);
+                    heightLeft -= pageHeight;
+                }
+
+                // PDF 파일 생성 및 다운로드 또는 새 탭에서 열기
+                // doc.save('sample.pdf'); // 파일 다운로드
+                window.open(doc.output('bloburl')); // 새 탭에서 열기
+            });
+        }
+
+        // 출력 버튼에 클릭 이벤트 연결 (예시)
+        const printButton = document.getElementById('print-button');
+        printButton.addEventListener('click', ()=>{
+            hide.style.display = "block";
+            showPrint();
+            hide.style.display = "none";
+        })
+        // printButton.addEventListener('click', showPrint);
+        
+
+    </script>
+
+</body>
+
+</html>
